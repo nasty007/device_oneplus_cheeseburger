@@ -21,15 +21,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from cheeseburger device
 $(call inherit-product, device/oneplus/cheeseburger/device.mk)
 
-# Inherit some common AOSiP stuff.
-$(call inherit-product, vendor/aosip/config/common_full_phone.mk)
+# Inherit some common DU stuff.
+$(call inherit-product, vendor/du/config/common_full_phone.mk)
 
 # GApps targets
 TARGET_GAPPS_ARCH := arm64
 IS_PHONE := true
 TARGET_BOOT_ANIMATION_RES := 1080
 
-PRODUCT_NAME := aosip_cheeseburger
+PRODUCT_NAME := du_cheeseburger
 PRODUCT_DEVICE := cheeseburger
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
