@@ -24,10 +24,11 @@ $(call inherit-product, device/oneplus/cheeseburger/device.mk)
 # Inherit some common DU stuff.
 $(call inherit-product, vendor/du/config/common_full_phone.mk)
 
-# GApps targets
-TARGET_GAPPS_ARCH := arm64
-IS_PHONE := true
-TARGET_BOOT_ANIMATION_RES := 1080
+# PixelGApps
+$(call inherit-product-if-exists, vendor/pixelgapps/pixel-gapps.mk)
+
+# Play Store Updates
+$(call inherit-product-if-exists, vendor/google/customization/config.mk)
 
 PRODUCT_NAME := du_cheeseburger
 PRODUCT_DEVICE := cheeseburger
